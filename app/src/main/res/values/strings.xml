@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BoundServiceDemo</string>
+    <string name="txt_view">0 %</string>
+    <string name="btn_name">Start Service</string>
+</resources>
