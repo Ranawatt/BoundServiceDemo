@@ -1,4 +1,4 @@
-package com.example.boundservicedemo.foregroundservice.newservice;
+package com.example.boundservicedemo.foregroundservice;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.example.boundservicedemo.R;
-import com.example.boundservicedemo.foregroundservice.ForegroundActivity;
 
 import static com.example.boundservicedemo.foregroundservice.App.CHANNEL_ID;
 
@@ -37,7 +36,7 @@ public class ExampleService extends Service {
                 .build();
         startForeground(1, notification);
         Log.d("ExampleService", "Service Started");
-        stopSelf();
+//        stopSelf();
         return START_NOT_STICKY;
     }
 

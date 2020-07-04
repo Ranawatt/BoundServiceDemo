@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.boundservicedemo.R;
-import com.example.boundservicedemo.foregroundservice.newservice.ExampleService;
 
 public class ForegroundActivity extends AppCompatActivity {
 
@@ -25,8 +24,8 @@ public class ForegroundActivity extends AppCompatActivity {
         String input = editText.getText().toString();
         Intent serviceIntent = new Intent(this, ExampleService.class);
         serviceIntent.putExtra("inputExtra",input);
-//        startService(serviceIntent);
-        ContextCompat.startForegroundService(this,serviceIntent);
+        startService(serviceIntent);
+//        ContextCompat.startForegroundService(this,serviceIntent);
 
     }
 

@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".foregroundservice.newservice.ExampleService"/>
+        <service android:name=".foregroundservice.ExampleService"/>
 <!--        <activity android:name=".MainActivity">-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
