@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.boundservicedemo">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -20,17 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".jobintentservice.ServicejobIntentActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <service android:name="jobscheduler.ExampleJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+<!--        <activity android:name=".jobintentservice.ServicejobIntentActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
 
-        <service
-            android:name=".jobintentservice.ExampleJobIntentService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+<!--        <service-->
+<!--            android:name=".jobintentservice.ExampleJobIntentService"-->
+<!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
     </application>
 
 </manifest>
