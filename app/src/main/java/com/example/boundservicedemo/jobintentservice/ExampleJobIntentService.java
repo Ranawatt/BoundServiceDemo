@@ -8,7 +8,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.core.app.JobIntentService;
 
-class ExampleJobIntentService extends JobIntentService {
+public class ExampleJobIntentService extends JobIntentService {
     public static final String TAG="ExampleJobIntentService";
 
     static void enqueueWork(Context context, Intent work){

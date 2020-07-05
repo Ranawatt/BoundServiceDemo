@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".jobintentservice.ExampleJobIntentService"/>
+        <service android:name=".jobintentservice.ExampleJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
 <!--        <activity android:name=".intentservice.ServiceIntentActivity">-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
