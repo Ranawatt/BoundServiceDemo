@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp"
-    tools:context=".intentservice.ServiceIntentActivity">
+    android:gravity="center"
+    tools:context=".jobintentservice.ServicejobIntentActivity">
 
     <EditText
         android:id="@+id/etTextInput"
@@ -21,6 +21,4 @@
         android:layout_height="wrap_content"
         android:text="Start Service"
         android:onClick="startService"/>
-
-
 </LinearLayout>
