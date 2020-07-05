@@ -19,10 +19,10 @@ public class ServicejobIntentActivity extends AppCompatActivity {
         editTextInput = findViewById(R.id.etTextInput);
     }
 
-    public void startService(View view) {
+    public void enqueueWork(View view) {
         String input = editTextInput.getText().toString();
         Intent serviceIntent = new Intent(this,ExampleJobIntentService.class);
         serviceIntent.putExtra("inputExtra",input);
-        startService(serviceIntent);
+        ExampleJobIntentService.enqueueWork(this,serviceIntent);
     }
 }
