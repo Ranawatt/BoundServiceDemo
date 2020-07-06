@@ -4,7 +4,7 @@ import android.app.job.JobParameters;
 import android.app.job.JobService;
 import android.util.Log;
 
-class ExampleJobScheduler extends JobService {
+public class ExampleJobScheduler extends JobService {
     private static final String TAG = "ExampleJobScheduler";
     private boolean jobCancelled = false;
     @Override
