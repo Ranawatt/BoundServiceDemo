@@ -16,7 +16,12 @@ class ExampleBroadcastReceiver extends BroadcastReceiver {
 //        }
         if(ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())){
 //            Toast.makeText(context,"Connectivity Changed", Toast.LENGTH_SHORT).show();
-            boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY)
+            boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY,false);
+            if (noConnectivity){
+                Toast.makeText(context, "Disconnected", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(context,"Connected",Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
