@@ -14,7 +14,7 @@ class ExampleBroadcastReceiver extends BroadcastReceiver {
 //        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())){
 //            Toast.makeText(context,"Boot Completed",Toast.LENGTH_SHORT).show();
 //        }
-        if(ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())){
+        if("com.example.boundservicedemo,".equals(intent.getAction())){
 //            Toast.makeText(context,"Connectivity Changed", Toast.LENGTH_SHORT).show();
             boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY,false);
             if (noConnectivity){
