@@ -14,14 +14,22 @@ class ExampleBroadcastReceiver extends BroadcastReceiver {
 //        if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())){
 //            Toast.makeText(context,"Boot Completed",Toast.LENGTH_SHORT).show();
 //        }
-        if("com.example.boundservicedemo,".equals(intent.getAction())){
+
+//        if(ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())){
 //            Toast.makeText(context,"Connectivity Changed", Toast.LENGTH_SHORT).show();
-            boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY,false);
-            if (noConnectivity){
-                Toast.makeText(context, "Disconnected", Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(context,"Connected",Toast.LENGTH_SHORT).show();
-            }
+//            boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY,false);
+//            if (noConnectivity){
+//                Toast.makeText(context, "Disconnected", Toast.LENGTH_SHORT).show();
+//            }else{
+//                Toast.makeText(context,"Connected",Toast.LENGTH_SHORT).show();
+//            }
+//        }
+
+//        TODO For createing CustomBroadcast
+
+        if ("com.example.boundservicedemo.EXAMPLE_ACTION".equals(intent.getAction())){
+            String receivedText = intent.getStringExtra("com.example.boundservicedemo.EXTRA_TEXT");
+            Toast.makeText(context, receivedText,Toast.LENGTH_LONG).show();
         }
     }
 }
