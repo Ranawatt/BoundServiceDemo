@@ -25,7 +25,7 @@ class ExampleBroadcastReceiver extends BroadcastReceiver {
 //            }
 //        }
 
-//        TODO For createing CustomBroadcast
+//        TODO For creating CustomBroadcast
 
         if ("com.example.boundservicedemo.EXAMPLE_ACTION".equals(intent.getAction())){
             String receivedText = intent.getStringExtra("com.example.boundservicedemo.EXTRA_TEXT");
