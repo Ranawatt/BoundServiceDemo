@@ -24,7 +24,7 @@ public class ExampleService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 //        We are commenting below return statement bcoz we want to return something else
-        super.onStartCommand(intent, flags, startId);
+//        super.onStartCommand(intent, flags, startId);
         String input = intent.getStringExtra("inputExtra");
         Intent notificationIntent = new Intent(this, ForegroundActivity.class);
         PendingIntent pendingIntent  = PendingIntent.getActivity(this,0,notificationIntent,0);
