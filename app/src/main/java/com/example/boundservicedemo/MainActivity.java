@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 progressBar.setProgress(myService.getProgress());
                                 progressBar.setMax(myService.getMaxValue());
-                                String progress = String.valueOf(100*myService.getProgress() / myService.getMaxValue())+"%";
+                                String progress = (100*myService.getProgress() / myService.getMaxValue())+"%";
                                 textView.setText(progress);
                                 handle.postDelayed(this, 100);
                             }else {
